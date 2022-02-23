@@ -1,0 +1,28 @@
+version: '3'
+services:
+ post_svc:
+  build: ./posts
+  ports:
+    - "4000:4000"
+
+ comment_svc:
+  build: ./comments
+  ports:
+    - "4001:4001"
+ 
+ eventbus_svc:
+  build: ./event-bus
+  ports:
+    - "4005:4005"  
+
+ query_svc:
+  build: ./query
+  ports:
+    - "4002:4002"  
+
+
+
+ client_svc:
+  build: ./client
+  ports:
+   - "3000:3000"
