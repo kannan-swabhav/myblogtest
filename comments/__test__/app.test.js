@@ -4,8 +4,8 @@ const request= require('supertest')
 it('returns a 201 on successful comments',
 async ()=>{
  return await request(app)
-        .post('/posts/123/comments')
+        .post('/event-bus/events/handler')
         .send({
-            content:"hello comment"
-        }).expect(201);
+            type:"comment created"
+        }).expect(200);
  });
