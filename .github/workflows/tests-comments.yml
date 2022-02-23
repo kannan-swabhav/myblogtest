@@ -1,4 +1,4 @@
-name: tests
+name: tests-comments
 
 on: pull_request
 
