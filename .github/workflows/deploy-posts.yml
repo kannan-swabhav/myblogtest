@@ -1,0 +1,21 @@
+name: deploy-posts
+
+on:
+ push:
+   branches:
+     - master:
+   path:
+     - 'posts/**'
+ 
+ jobs:
+  build:
+   runs-on: ubuntu-latest
+   steps:
+    - uses: actions/checkout@v2
+    - run: cd posts && docker build -t kannans89/posts .
+    - run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+      env:
+        DOCKER_USERNAME: ${{secrets.DOCKER_NAME}}
+        DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+    - run: docker push kannans89/posts
+   
