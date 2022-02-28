@@ -20,5 +20,5 @@ jobs:
         with:
          cluster_name: my-first-cluster-1
          location: asia-east1-a
-      - run: kubectl rollout restart deployment posts-depl
+    #  - run: kubectl rollout restart deployment posts-depl
 
