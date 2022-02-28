@@ -14,7 +14,7 @@ spec:
   spec:
    containers:
     - name: comments
-      image: kannans89/comments:latest
+      image: us.gcr.io/decoded-plane-339211/comments
 ---
 apiVersion: v1
 kind: Service

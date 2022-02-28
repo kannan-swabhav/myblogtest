@@ -14,7 +14,7 @@ spec:
   spec:
    containers:
     - name: client
-      image: kannans89/client:latest
+      image: us.gcr.io/decoded-plane-339211/client
 ---
 apiVersion: v1
 kind: Service
