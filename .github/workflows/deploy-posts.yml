@@ -12,8 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: cd posts && docker build -t kannans89/posts .
-      - run: docker push kannans89/posts
       - uses: google-github-actions/auth@v0
         with:
           credentials_json: ${{ secrets.GKE_SA_KEY }}
