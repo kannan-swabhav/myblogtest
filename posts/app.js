@@ -30,7 +30,7 @@ app.post('/posts/create',async (req,resp)=>{
 
 });
 
-
+//
 app.post('/event-bus/events/handler',(req,resp)=>{
   const {type} = req.body
   console.log("Received event :",type)
