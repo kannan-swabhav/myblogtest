@@ -1,11 +1,11 @@
-name: deploy-posts
+name: deploy-comments
 
 on:
   push:
     branches:
       - master
     paths:
-      - 'posts/**'
+      - 'comments/**'
 
 jobs:
   build:
@@ -15,10 +15,10 @@ jobs:
       - uses: google-github-actions/auth@v0
         with:
           credentials_json: ${{ secrets.GKE_SA_KEY }}
-      - run: cd posts && gcloud builds submit --tag us.gcr.io/decoded-plane-339211/posts
+      - run: cd comments && gcloud builds submit --tag us.gcr.io/decoded-plane-339211/comments
       - uses: google-github-actions/get-gke-credentials@v0
         with:
          cluster_name: my-first-cluster-1
          location: asia-east1-a
-      - run: kubectl rollout restart deployment posts-depl
+      - run: kubectl rollout restart deployment comments-depl
 
