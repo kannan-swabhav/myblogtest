@@ -6,7 +6,7 @@ export default ()=> {
     let [title,setTitle] =useState('post1')
     const onSubmitHandler = async (event)=>{
         event.preventDefault()
-        await axios.post('http://posts.com/posts/create',{
+        await axios.post('http://my-sample-blog-kannan.xyz/posts/create',{
             title
         })
 
