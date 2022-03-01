@@ -1,12 +1,11 @@
 const express = require('express')
 const bodyparser = require('body-parser')
 const cors = require('cors')
-const  axios  = require('axios')
 
 const app = express()
 app.use(bodyparser.json())
 app.use(cors())
-const LOCAL_HOST= "event-bus-srv"
+
 
 const posts = {}
 /*
