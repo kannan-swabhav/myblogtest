@@ -7,5 +7,5 @@ async ()=>{
         .post('/posts/create')
         .send({
             title:"hello post"
-        }).expect(301);
+        }).expect(201);
  });
